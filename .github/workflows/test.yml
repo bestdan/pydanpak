@@ -33,10 +33,16 @@ jobs:
           source .venv/bin/activate
           uv pip install -e ".[dev]"
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
           source .venv/bin/activate
-          pytest tests/
+          pytest --cov=pydanpak --cov-report=xml tests/
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: ./coverage.xml
+          fail_ci_if_error: true
 
       - name: Check formatting
         run: |

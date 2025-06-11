@@ -15,7 +15,8 @@ build-backend = "setuptools.build_meta"
 dev = [
     "pytest",
     "black",
-    "isort"
+    "isort",
+    "pytest-cov"
 ]
 
 [tool.black]
@@ -23,4 +24,20 @@ line-length = 88
 
 [tool.isort]
 profile = "black"
-line_length = 88 
+line_length = 88
+
+[tool.coverage.run]
+source = ["pydanpak"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "pass",
+    "@abstractmethod",
+]
+fail_under = 80 

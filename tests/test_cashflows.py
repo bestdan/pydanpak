@@ -12,4 +12,4 @@ def test_total_cashflows():
 
 def test_empty_cashflows():
     cf = Cashflows(cashflows={})
-    assert total_cashflows(cf) == 0.0 
+    assert total_cashflows(cf) == 0.0

@@ -1,6 +1,6 @@
 # pydanpak
 
-[![codecov](https://codecov.io/gh/danielegan/pydanpak/branch/main/graph/badge.svg)](https://codecov.io/gh/danielegan/pydanpak)
+[![codecov](https://codecov.io/gh/bestdan/pydanpak/graph/badge.svg?token=WWMT6WUQGS)](https://codecov.io/gh/bestdan/pydanpak)
 
 A Python package for financial analysis, featuring date-indexed cashflow management.
 
